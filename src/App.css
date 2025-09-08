@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+/* Top bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(17,18,19,0.95), rgba(17,18,19,0.6) 70%, rgba(17,18,19,0));
+  backdrop-filter: blur(4px);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.topbar-inner {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.topbar .container { padding-left: clamp(16px, 4vw, 40px); padding-right: clamp(16px, 4vw, 40px); }
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+.menu-icon {
+  width: 18px; height: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.menu-icon span {
+  width: 100%; height: 100%;
+  background: var(--text);
+  border-radius: 20%;
+}
+.social {
+  display: flex; align-items: center; gap: 14px;
+}
+.icon-link { opacity: 0.9; }
+.icon-link:hover { opacity: 1; }
+
+/* Hero */
+.hero {
+  padding-top: 8px;
+}
+.hero-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(48px, 12vw, 120px);
+  line-height: 0.9;
+  margin: 8px 0 24px;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+.hero-media {
+  width: 100%;
+  background: var(--panel);
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+  aspect-ratio: 16 / 9;
+  background-position: center;
+  background-size: cover;
+}
+.hero-media.placeholder {
+  background-image: radial-gradient(60% 80% at 30% 20%, #2a2c30, #1a1b1c 70%);
 }
 
-.App-link {
-  color: #61dafb;
+/* Content */
+main.home { padding: 28px 0 80px; }
+.section { margin: 54px 0; }
+.section h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(28px, 4.6vw, 44px);
+  margin: 0 0 16px;
+  color: var(--accent);
 }
+.section p {
+  color: var(--text);
+  line-height: 1.8;
+  margin: 12px 0;
+  font-size: 18px;
+}
+.muted { color: var(--muted); }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Menu overlay */
+.overlay {
+  position: fixed; inset: 0; z-index: 20;
+  background: rgba(0,0,0,0.86);
+  display: none;
+}
+.overlay.open { display: block; }
+.overlay-inner {
+  height: 100%; width: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.overlay-nav {
+  text-align: left;
+}
+.overlay-nav a {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  color: #fff;
+  font-size: clamp(32px, 8vw, 72px);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.overlay-close {
+  position: absolute; top: 18px; right: 18px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #222; color: #fff; border: 1px solid rgba(255,255,255,0.12);
+  cursor: pointer; font-size: 18px;
 }
