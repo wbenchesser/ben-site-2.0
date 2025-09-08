@@ -7,7 +7,7 @@ function Icon({ name, size = 18 }) {
     case 'mail':
       return (
         <svg {...common} viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z" />
+          <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.01L12 13l8-4.99V8L12 16 4 8z"/>
         </svg>
       );
     case 'github':
@@ -49,9 +49,9 @@ export default function HomePage() {
             MENU
           </button>
           <div className="social">
-            <a className="icon-btn" href="mailto:wbenchesser@gmail.com" aria-label="Email"><Icon name="mail"/></a>
-            <a className="icon-btn" href="https://github.com/wbenchesser" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github"/></a>
-            <a className="icon-btn" href="https://www.linkedin.com/in/wbenchesser" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin"/></a>
+            <a className="icon-link" href="mailto:wbenchesser@gmail.com" aria-label="Email"><Icon name="mail"/></a>
+            <a className="icon-link" href="https://github.com/wbenchesser" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github"/></a>
+            <a className="icon-link" href="https://www.linkedin.com/in/wbenchesser" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin"/></a>
           </div>
         </div>
       </header>
@@ -61,22 +61,22 @@ export default function HomePage() {
           <div className="hero-header">
             <h1 className="hero-title">BEN CHESSER</h1>
             <div className="signature" aria-hidden>
-              <span className="signature-text">wbenchesser</span>
+              <svg width="320" viewBox="0 0 320 80">
+                <text x="0" y="58" fontSize="56">wbenchesser</text>
+              </svg>
             </div>
           </div>
           <div
-            className="hero-media"
-            style={{ backgroundImage: "url(/images/home/home-hero.jpg)" }}
+            className="hero-media placeholder"
+            style={{ backgroundImage: "url(/images/home/home-hero.jpg)", backgroundBlendMode: 'overlay' }}
             role="img"
-            aria-label="Ben (left) and Noah Smith (right) — Fall 2024"
-          >
-            <div className="hero-caption">Me (left) and Noah Smith (right) — Fall 2024</div>
-          </div>
+            aria-label="Hero image"
+          />
         </div>
 
         <div className="container">
           <section className="section">
-            <h2>Welcome</h2>
+            <h2>Welcome!</h2>
             <p>In case you don't know me, I'm Ben.</p>
             <p>
               I'm working on my BS in Computer Science with a minor in Creative Writing at UNC

@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 16px 0;
 }
 .topbar .container { padding-left: clamp(16px, 4vw, 40px); padding-right: clamp(16px, 4vw, 40px); }
 .menu-btn {
@@ -35,35 +35,50 @@
   background: var(--text);
   border-radius: 20%;
 }
-.social { display: flex; align-items: center; gap: 12px; }
-/* unified icon buttons */
-.icon-btn {
-  width: 28px; height: 28px;
-  display: inline-grid; place-items: center;
-  color: var(--accent);
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 6px;
-  background: rgba(255,255,255,0.06);
-  transition: background .2s ease, border-color .2s ease, transform .05s ease;
+.social {
+  display: flex; align-items: center; gap: 14px;
 }
-.icon-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.85); text-decoration: none; }
-.icon-btn:active { transform: translateY(1px); }
-.icon-btn svg { width: 18px; height: 18px; display: block; }
+.icon-link { opacity: 0.9; }
+.icon-link:hover { opacity: 1; }
 
 /* Hero */
-.hero { padding-top: 0; text-align: center; }
+.hero {
+  padding-top: 8px;
+}
 .hero-title {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 900;
   font-size: clamp(48px, 12vw, 120px);
   line-height: 0.9;
-  margin: 0 0 20px;
+  margin: 8px 0 24px;
   letter-spacing: 0.02em;
   color: var(--accent);
 }
-.hero-header { position: relative; display: inline-block; margin-bottom: 10px; }
-.signature { position: absolute; right: 0.1em; bottom: 0.15em; color: var(--brand); }
-.signature-text { font-family: 'Mr Dafoe', cursive; font-size: clamp(30px, 5.4vw, 58px); line-height: 1; color: var(--brand); white-space: nowrap; text-shadow: 0 1px 0 rgba(0,0,0,0.25); }
+.hero-header { position: relative; display: inline-block; }
+.signature {
+  position: absolute;
+  right: 6px;
+  top: -10px;
+  transform: translateY(-10%);
+  color: var(--brand);
+}
+.signature svg { display: block; height: auto; }
+.signature text {
+  font-family: 'Great Vibes', cursive;
+  fill: var(--brand);
+  stroke: var(--brand);
+  stroke-width: 2px;
+  paint-order: stroke fill;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill-opacity: 0;
+  animation: signature-draw 2.2s ease forwards 0.2s;
+}
+@keyframes signature-draw {
+  0%   { stroke-dashoffset: 1000; fill-opacity: 0; }
+  80%  { fill-opacity: 0; }
+  100% { stroke-dashoffset: 0; fill-opacity: 1; }
+}
 .hero-media {
   width: 100%;
   background: var(--panel);
@@ -77,18 +92,15 @@
 .hero-media.placeholder {
   background-image: radial-gradient(60% 80% at 30% 20%, #2a2c30, #1a1b1c 70%);
 }
-/* Hero image caption */
-.hero-caption {
-  position: absolute;
-  left: 12px;
-  bottom: 10px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  color: var(--accent);
-  background: rgba(0,0,0,0.55);
-  border: 1px solid rgba(255,255,255,0.12);
-  font-size: 13px;
-  line-height: 1.2;
+.hero-media::before {
+  /* pastel purple flare along the top-right */
+  content: '';
+  position: absolute; right: 0; top: -8px;
+  width: 38%; height: 12px;
+  background: linear-gradient(90deg, rgba(198,163,255,0.2) 0%, rgba(198,163,255,0.85) 55%, rgba(198,163,255,1) 100%);
+  filter: drop-shadow(0 2px 0 rgba(198,163,255,0.2));
+  transform: skewX(-10deg);
+  border-radius: 3px;
 }
 
 /* Content */
