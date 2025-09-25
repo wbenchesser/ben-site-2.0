@@ -1,0 +1,190 @@
+/* Top bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(17,18,19,0.95), rgba(17,18,19,0.6) 70%, rgba(17,18,19,0));
+  backdrop-filter: blur(4px);
+}
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.topbar .container { padding-left: clamp(16px, 4vw, 40px); padding-right: clamp(16px, 4vw, 40px); }
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 6px;
+  height: 32px;
+  padding: 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background .2s ease, border-color .2s ease, transform .05s ease;
+}
+.menu-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.85); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-icon {
+  width: 16px; height: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+}
+.menu-icon span {
+  width: 100%; height: 100%;
+  background: var(--text);
+  border-radius: 20%;
+}
+.social { display: flex; align-items: center; gap: 12px; }
+/* unified icon buttons */
+.icon-btn {
+  width: 32px; height: 32px;
+  display: inline-grid; place-items: center;
+  color: var(--accent);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  transition: background .2s ease, border-color .2s ease, transform .05s ease;
+}
+.icon-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.85); text-decoration: none; }
+.icon-btn:active { transform: translateY(1px); }
+.icon-btn svg { width: 20px; height: 20px; display: block; }
+
+/* Hero */
+.hero { padding-top: 0; text-align: center; margin-top: -35px; }
+.hero-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(44px, 10.5vw, 120px);
+  line-height: 0.9;
+  margin: 0 0 20px;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  white-space: nowrap; /* prevent wrap in Safari */
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+.hero-header { position: relative; display: inline-block; margin-bottom: 10px; }
+/* Keep signature overlap consistent across sizes */
+.signature { position: absolute; right: clamp(6px, 1vw, 16px); bottom: clamp(-12px, -0.9vw, -6px); color: var(--brand); }
+.signature-text { font-family: 'Mr Dafoe', cursive; font-size: clamp(30px, 5.4vw, 58px); line-height: 1; color: var(--brand); white-space: nowrap; text-shadow: 0 1px 0 rgba(0,0,0,0.25); }
+.hero-media {
+  width: 100%;
+  background: var(--panel);
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+  aspect-ratio: 16 / 9;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.hero-media.placeholder {
+  background-image: radial-gradient(60% 80% at 30% 20%, #2a2c30, #1a1b1c 70%);
+}
+/* Hero image caption */
+.hero-caption {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--accent);
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/* Content */
+main.home { padding: 28px 0 80px; }
+.section { margin: 54px 0; }
+.page { padding: 28px 0 80px; }
+.page-title { font-family: "Playfair Display", Georgia, serif; font-weight: 900; font-size: clamp(32px, 6vw, 64px); margin: 6px 0 18px; color: var(--accent); text-align: left; }
+
+/* Poetry list */
+.poem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); grid-auto-rows: 1fr; gap: 16px; margin-top: 18px; }
+.poem-card { display: block; text-decoration: none; color: var(--accent); }
+.poem-card-inner { background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 16px; height: 100%; transition: transform .08s ease, background .2s ease, border-color .2s ease; }
+.poem-card:hover .poem-card-inner { transform: translateY(-2px); background: #212224; border-color: rgba(255,255,255,0.16); }
+.poem-title { margin: 0 0 8px; font-size: 20px; line-height: 1.3; color: var(--brand); font-weight: 900; font-family: "Playfair Display", Georgia, serif; }
+.poem-meta { color: var(--muted); font-size: 14px; }
+
+/* Poem page */
+.poem-container { max-width: 780px; }
+.crumbs { color: var(--muted); }
+.poem-byline { color: var(--muted); margin-top: -8px; }
+.poem p { font-size: 20px; line-height: 1.9; margin: 18px 0; }
+
+/* Blog list */
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.blog-card { display: block; color: var(--accent); text-decoration: none; }
+.blog-card-inner { background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 18px; transition: transform .08s ease, background .2s ease, border-color .2s ease; height: 100%; }
+.blog-card:hover .blog-card-inner { transform: translateY(-2px); background: #212224; border-color: rgba(255,255,255,0.16); }
+.blog-title { margin: 0 0 6px; font-weight: 900; font-family: "Playfair Display", Georgia, serif; font-size: 22px; color: var(--blog); }
+.blog-meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+.blog-blurb { color: var(--text); font-size: 16px; line-height: 1.6; }
+
+/* Blog article */
+.article-container { max-width: 860px; }
+.article-container .page-title { color: var(--blog); }
+.article-byline { color: var(--muted); margin-top: -8px; }
+.article p { font-size: 18px; line-height: 1.85; margin: 16px 0; }
+.article h3, .article h4 { font-family: "Playfair Display", Georgia, serif; margin: 18px 0 8px; }
+.article blockquote { margin: 14px 0; padding: 10px 14px; background: rgba(255,255,255,0.04); border-left: 3px solid var(--brand); border-radius: 6px; }
+.article blockquote.poem { background: transparent; border-left-color: rgba(255,255,255,0.15); }
+.article blockquote p { margin: 8px 0; }
+
+/* Home: recent lists */
+.home-subtitle { font-family: "Playfair Display", Georgia, serif; font-weight: 900; color: var(--accent); font-size: clamp(18px, 2.6vw, 24px); margin: 18px 0 8px; }
+.home-list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 8px 0 14px; }
+.section h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(28px, 4.6vw, 44px);
+  margin: 0 0 16px;
+  color: var(--brand);
+}
+.section p {
+  color: var(--text);
+  line-height: 1.8;
+  margin: 12px 0;
+  font-size: 18px;
+}
+.muted { color: var(--muted); }
+
+/* Menu overlay */
+.overlay {
+  position: fixed; inset: 0; z-index: 20;
+  background: rgba(0,0,0,0.86);
+  display: none;
+}
+.overlay.open { display: block; }
+.overlay-inner {
+  height: 100%; width: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.overlay-nav {
+  text-align: left;
+}
+.overlay-nav a {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  color: #fff;
+  font-size: clamp(32px, 8vw, 72px);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.overlay-close {
+  position: absolute; top: 18px; right: 18px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #222; color: #fff; border: 1px solid rgba(255,255,255,0.12);
+  cursor: pointer; font-size: 18px;
+}
