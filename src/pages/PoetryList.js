@@ -14,7 +14,7 @@ export default function PoetryList() {
             <a key={p.id} role="listitem" className="poem-card" href={`#/poetry/${p.id}`}>
               <div className="poem-card-inner">
                 <h3 className="poem-title">{p.title}</h3>
-                <div className="poem-meta">{p.author} • {p.date}</div>
+                <div className="poem-meta">{p.date}</div>
               </div>
             </a>
           ))}
@@ -23,4 +23,3 @@ export default function PoetryList() {
     </main>
   );
 }
-

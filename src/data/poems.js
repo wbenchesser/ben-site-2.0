@@ -1,6 +1,44 @@
 // Store poem metadata and HTML content here
 export const poems = [
     {
+      id: "wood-flowers",
+      title: "Wood Flowers",
+      author: "ben chesser",
+      date: "Fall 2025",
+      content: `
+        <p>after our woods burned<br/>
+        your warmth cuts<br/>
+        my brain in two halves<br/>
+        two thoughts<br/>
+        one pure, one absolute</p>
+
+        <p>the latter sees the pattern, the lie<br/>
+        confines but comforts<br/>
+        the walls suppress contact<br/>
+        convince that it was not a painful lesson<br/>
+        it was just painful<br/>
+        that my woods were left as ash and rubble<br/>
+        and only I was charred</p>
+
+        <p>if I destroyed you, do not smile<br/>
+        a greeting meant for someone clean<br/>
+        enough!<br/>
+        the child will take this<br/>
+        and run to the high hills<br/>
+        see the light and shout from the peaks<br/>
+        this is value, this is love<br/>
+        I cannot stand to see<br/>
+        me like this<br/>
+        to kneel at the bleeding boundary<br/>
+        trying to cry</p>
+
+        <p>painfully<br/>
+        woefully<br/>
+        beautifully<br/>
+        there is a home for you wherever I am</p>
+      `
+    },
+    {
       id: "other-side",
       title: "the other side of the hill",
       author: "ben chesser",
