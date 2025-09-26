@@ -31,7 +31,11 @@ export default function App() {
     <>
       <Topbar onOpenMenu={() => setMenuOpen(true)} />
       {view}
-      <MenuOverlay open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <MenuOverlay
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        currentRoute={route}
+      />
     </>
   );
 }

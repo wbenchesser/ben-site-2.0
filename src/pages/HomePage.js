@@ -47,7 +47,7 @@ export default function HomePage() {
               apps including ones for other nonprofits like PORCH and startup apps like Centible.
             </p>
             <p>
-              You can view my resume <a href="#resume">here</a>.
+              You can view my resume <a href="/ben-chesser-resume.pdf" target="_blank" rel="noreferrer">here</a>.
             </p>
           </section>
 
