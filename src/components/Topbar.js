@@ -2,13 +2,21 @@ import React from 'react';
 import { GridIcon, Icon } from './Icons';
 import '../App.css';
 
-export default function Topbar({ onOpenMenu }) {
+export default function Topbar({ onOpenMenu, menuOpen = false }) {
   return (
     <header className="topbar">
-      <div className="container topbar-inner">
-        <button className="menu-btn" onClick={onOpenMenu} aria-label="Open menu">
+      <div className="topbar-inner">
+        <button
+          type="button"
+          className="menu-btn"
+          onClick={onOpenMenu}
+          aria-label="Open navigation"
+          aria-haspopup="true"
+          aria-expanded={menuOpen}
+          aria-controls="site-menu"
+        >
           <GridIcon />
-          MENU
+          <span className="menu-btn-label">Menu</span>
         </button>
         <div className="social">
           <a className="icon-btn" href="mailto:wbenchesser@gmail.com" aria-label="Email"><Icon name="mail"/></a>
@@ -19,4 +27,3 @@ export default function Topbar({ onOpenMenu }) {
     </header>
   );
 }
-

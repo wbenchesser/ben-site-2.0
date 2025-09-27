@@ -25,7 +25,7 @@ export default function MenuOverlay({ open, onClose, currentRoute = '/' }) {
           <a href="#/blog" onClick={handle} {...linkState('blog')}>BLOG</a>
           <a href="#/poetry" onClick={handle} {...linkState('poetry')}>POETRY</a>
           <a href="#/projects" onClick={handle} {...linkState('projects')}>PROJECTS</a>
-          <a href="#/photography" onClick={handle} {...linkState('photography')}>PHOTOGRAPHY</a>
+          <a href="#/gallery" onClick={handle} {...linkState('gallery')}>GALLERY</a>
         </nav>
       </div>
     </div>

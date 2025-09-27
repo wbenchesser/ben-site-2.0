@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className="container">
           <section className="section">
             <h2>Welcome</h2>
-            <p>In case you don't know me, I'm Ben.</p>
+            <p>In case you don't know me, I'm Ben!</p>
             <p>
               I'm working on my BS in Computer Science with a minor in Creative Writing at UNC
               Chapel Hill and plan to graduate May, 2026.
@@ -36,15 +36,20 @@ export default function HomePage() {
             <p>
               I'm currently a teaching assistant for UNC's Computer Organization course (COMP 311)
               and used to be a TA for our System's Fundamentals course (COMP 211).
-            </p>
-            <p>
-              I am the Computer Science Experience Labs (CSXL) staff manager and have been
+              I am the <a href="https://csxl.unc.edu/welcome" target="_blank" rel="noreferrer">Computer Science Experience Labs</a> (CSXL) staff manager and have been
               working with them for three semesters.
             </p>
             <p>
-              Finally, I am the senior advisor and previous CEO of App Team Carolina, a nonprofit
+              I am the senior advisor and previous CEO of <a href="https://appteamcarolina.com" target="_blank" rel="noreferrer">App Team Carolina</a>, a nonprofit
               student organization that primarily teaches mobile development and makes production-level
               apps including ones for other nonprofits like PORCH and startup apps like Centible.
+            </p>
+            <p>
+              I recently started learning guitar and love indie and rock music. Being placed in Austin was 
+              a great fit as the live music scene there is incredible, and I loved seeing my favorite band,  
+              Peach Pit, perform! I also spend a lot of time reading. Lately, I've been focused on the epic 
+              fantasy series <i>The Stormlight Archive.</i> In addition, I'm currently training for a half marathon, and 
+              always appreciate recommendations for good running routes.
             </p>
             <p>
               You can view my resume <a href="/ben-chesser-resume.pdf" target="_blank" rel="noreferrer">here</a>.
@@ -69,7 +74,10 @@ export default function HomePage() {
                 </a>
               ))}
             </div>
-            <p><a href="#/blog">Read all blog posts →</a></p>
+            <p className="read-more"><a href="#/blog">Read all blog posts →</a></p>
+          </section>
+
+          <section className='section'>
             <p>
               Some of you may know I'm a creative writing minor. I don't know how, it's not like I mention it.
               If it's a poem, it may be a bit sappy or cringe, so be prepared for that. Here's some of my work.

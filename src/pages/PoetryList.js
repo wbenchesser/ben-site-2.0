@@ -4,7 +4,7 @@ import '../App.css';
 
 export default function PoetryList() {
   return (
-    <main className="page">
+    <main className="page page-poetry">
       <div className="container">
         <h1 className="page-title">Poetry</h1>
         <p className="muted">A selection of poems. Click to read.</p>

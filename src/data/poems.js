@@ -4,7 +4,7 @@ export const poems = [
       id: "wood-flowers",
       title: "Wood Flowers",
       author: "ben chesser",
-      date: "Fall 2025",
+      date: "Summer 2025",
       content: `
         <p>after our woods burned<br/>
         your warmth cuts<br/>

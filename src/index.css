@@ -7,6 +7,11 @@
   --brand: #AA83E8; /* brand accent */
   --blog: #AA83E8; /* blog title orange */
   --maxw: 1100px;
+  --topbar-height: 56px;
+  --font-body: 'Bitter', serif;
+  --font-heading: 'Bitter', serif;
+  --font-hero: 'Playfair Display', Georgia, serif;
+  --font-signature: 'Mr Dafoe', cursive;
 }
 
 * { box-sizing: border-box; }
@@ -17,7 +22,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

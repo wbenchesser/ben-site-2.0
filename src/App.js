@@ -6,6 +6,9 @@ import BlogList from './pages/BlogList';
 import BlogPage from './pages/BlogPage';
 import Topbar from './components/Topbar';
 import MenuOverlay from './components/MenuOverlay';
+import ProjectList from './pages/ProjectList';
+import ProjectPage from './pages/ProjectPage';
+import GalleryPage from './pages/GalleryPage';
 
 function useHashRoute() {
   const [hash, setHash] = React.useState(window.location.hash || '#/');
@@ -26,10 +29,14 @@ export default function App() {
   else if (route === '/poetry') view = <PoetryList />;
   else if (route.startsWith('/blog/')) view = <BlogPage />;
   else if (route === '/blog') view = <BlogList />;
+  else if (route.startsWith('/projects/')) view = <ProjectPage />;
+  else if (route === '/projects') view = <ProjectList />;
+  else if (route === '/gallery') view = <GalleryPage />;
 
   return (
     <>
-      <Topbar onOpenMenu={() => setMenuOpen(true)} />
+      <Topbar onOpenMenu={() => setMenuOpen(true)} menuOpen={menuOpen} />
+      <div className="topbar-offset" aria-hidden="true" />
       {view}
       <MenuOverlay
         open={menuOpen}

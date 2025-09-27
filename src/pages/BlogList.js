@@ -4,7 +4,7 @@ import '../App.css';
 
 export default function BlogList() {
   return (
-    <main className="page">
+    <main className="page page-blog">
       <div className="container">
         <h1 className="page-title">Blog</h1>
         <div className="blog-grid" role="list">
@@ -22,4 +22,3 @@ export default function BlogList() {
     </main>
   );
 }
-
