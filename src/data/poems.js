@@ -1,8 +1,8 @@
 // Store poem metadata and HTML content here
 export const poems = [
     {
-      id: "wood-flowers",
-      title: "Wood Flowers",
+      id: "paper-flowers",
+      title: "Paper Flowers",
       author: "ben chesser",
       date: "Summer 2025",
       content: `
