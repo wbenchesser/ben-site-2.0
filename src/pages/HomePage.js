@@ -17,7 +17,7 @@ export default function HomePage() {
           </div>
           <div
             className="hero-media"
-            style={{ backgroundImage: `url(${heroImage})` }}
+            style={{ backgroundImage: `url("${heroImage}")` }}
             role="img"
           >
           </div>
