@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wbenchesser.github.io/ben-site-2.0/static/css/main.de1c48e8.css",
+    "main.js": "/wbenchesser.github.io/ben-site-2.0/static/js/main.a01c3150.js",
+    "static/js/453.c41f217d.chunk.js": "/wbenchesser.github.io/ben-site-2.0/static/js/453.c41f217d.chunk.js",
+    "index.html": "/wbenchesser.github.io/ben-site-2.0/index.html",
+    "main.de1c48e8.css.map": "/wbenchesser.github.io/ben-site-2.0/static/css/main.de1c48e8.css.map",
+    "main.a01c3150.js.map": "/wbenchesser.github.io/ben-site-2.0/static/js/main.a01c3150.js.map",
+    "453.c41f217d.chunk.js.map": "/wbenchesser.github.io/ben-site-2.0/static/js/453.c41f217d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de1c48e8.css",
+    "static/js/main.a01c3150.js"
+  ]
+}
