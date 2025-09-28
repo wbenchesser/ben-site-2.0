@@ -1,10 +1,12 @@
+const projectImage = (file) => `${process.env.PUBLIC_URL || ''}/images/projects/${file}`;
+
 export const projects = [
   {
     id: 'magic-missiles',
     title: 'Magic Missiles',
     summary:
       'HackNC 2024 Best Gaming Hack: campus-scale location strategy built with Swift client and a TypeScript/Express backend.',
-    image: '/images/projects/magic-missiles.png',
+    image: projectImage('magic-missiles.png'),
     tech: ['Swift', 'TypeScript', 'Express', 'Prisma', 'PostgreSQL', 'Push Notifications'],
     repo: 'https://github.com/rydklein/missile-app',
     content: `
@@ -64,7 +66,7 @@ export const projects = [
     title: 'Chain Game',
     summary:
       'Solo-built word chain game with a React front end, FastAPI backend, and OpenAI-powered validation deployed on DigitalOcean.',
-    image: '/images/projects/chain-game.png',
+    image: projectImage('chain-game.png'),
     tech: ['React', 'FastAPI', 'Python', 'OpenAI API', 'DigitalOcean', 'Nginx'],
     repo: 'https://github.com/wbenchesser/chain-game',
     content: `
@@ -117,7 +119,7 @@ export const projects = [
     title: 'Whisker',
     summary:
       'iOS adoption app that matches users with pets using RescueGroups API, frictionless swipe-to-save, and offline persistence.',
-    image: '/images/projects/whisker.png',
+    image: projectImage('whisker.png'),
     tech: ['Swift', 'SwiftUI', 'SwiftData', 'RescueGroups API', 'MVVM'],
     repo: 'https://github.com/appteamcarolina/s24-apprenticeship-finalproject-pettinder',
     content: `
@@ -152,7 +154,7 @@ export const projects = [
     title: 'CSXL Academic Planner',
     summary:
       'Angular-powered planner that tracks UNC CS courses, prerequisites, and requirements, keeping students on top of their degree path.',
-    image: '/images/projects/csxl-academic-planner.png',
+    image: projectImage('csxl-academic-planner.png'),
     tech: ['Angular', 'TypeScript', 'FastAPI', 'Python', 'SQLite', 'Pytest'],
     repo: 'https://github.com/wbenchesser/csxl-academic-planner',
     content: `
@@ -200,7 +202,7 @@ export const projects = [
     title: 'CD Art Creator',
     summary:
       'Generates pixelated CD sleeve artwork from any Spotify playlist using Spotipy, Pillow, and custom design rules.',
-    image: '/images/projects/cd-art-creator.PNG',
+    image: projectImage('cd-art-creator.PNG'),
     tech: ['Python', 'Spotipy', 'Pillow', 'Spotify API'],
     repo: 'https://github.com/wbenchesser/cd-art-creator',
     content: `

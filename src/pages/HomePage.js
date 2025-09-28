@@ -4,6 +4,7 @@ import { poems } from '../data/poems';
 import '../App.css';
 
 export default function HomePage() {
+  const heroImage = `${process.env.PUBLIC_URL || ''}/images/home/home-hero.jpg`;
   return (
     <>
       <main className="home">
@@ -16,7 +17,7 @@ export default function HomePage() {
           </div>
           <div
             className="hero-media"
-            style={{ backgroundImage: "url(/images/home/home-hero.jpg)" }}
+            style={{ backgroundImage: `url(${heroImage})` }}
             role="img"
           >
           </div>
