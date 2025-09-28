@@ -14,6 +14,7 @@ export default function GalleryPage() {
   const [active, setActive] = React.useState(null);
   const closeButtonRef = React.useRef(null);
   const lastFocusedRef = React.useRef(null);
+  const basePath = `${process.env.PUBLIC_URL || ''}/images/gallery`;
 
   React.useEffect(() => {
     if (!active) return undefined;
@@ -41,7 +42,9 @@ export default function GalleryPage() {
 
   const closeActive = () => setActive(null);
 
-  const activeSrc = active ? `/images/gallery/${active.section.id}/${active.image.file}` : null;
+  const activeSrc = active
+    ? `${basePath}/${active.section.id}/${active.image.file}`
+    : null;
   const activeAlt = active ? `${active.image.location} — ${active.image.date}` : '';
 
   return (
@@ -57,7 +60,7 @@ export default function GalleryPage() {
             <h2 className="gallery-section-title">{section.title}</h2>
             <div className="gallery-grid">
               {section.images.map((image) => {
-                const src = `/images/gallery/${section.id}/${image.file}`;
+                const src = `${basePath}/${section.id}/${image.file}`;
                 const focus = focusPositions[image.focus] || focusPositions.center;
                 const altText = `${image.location} — ${image.date}`;
 
