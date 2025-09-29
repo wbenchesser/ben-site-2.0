@@ -105,6 +105,20 @@
 .hero-media.placeholder {
   background-image: radial-gradient(60% 80% at 30% 20%, #2a2c30, #1a1b1c 70%);
 }
+
+@media (max-width: 520px) {
+  .hero-title {
+    font-size: clamp(34px, 10vw, 52px);
+    letter-spacing: 0.035em;
+    line-height: 0.95;
+    white-space: normal;
+  }
+
+  .signature {
+    right: clamp(6px, 4vw, 18px);
+    bottom: clamp(-10px, -1.6vw, -4px);
+  }
+}
 /* Hero image caption */
 .hero-caption {
   position: absolute;
