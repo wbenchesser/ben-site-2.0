@@ -1,6 +1,64 @@
 // Blog post metadata and HTML content
 export const blogs = [
   {
+    id: "chat-gpt",
+    title: "How ChatGPT Broke College",
+    date: "September 29th, 2025",
+    blurb:
+      "Education has been massively disrupted. Can we crawl our way out or will we sink into the slop?",
+    content: `
+      <p>In the late 1970s, calculators slowly started entering classrooms around the United States and the world. At the same time, an argument began about whether or not these calculators should be allowed in education. Many parents and educators argued that their use would hinder students' ability to perform mental math and would stunt the growth of basic mathematical skills. Some teachers claimed that the constant use of calculators would cause an over-reliance and leave students unable to adapt in settings without them. Others still argued that those of higher economic status would have an unfair advantage, as they would have access to more advanced and expensive calculators that would directly benefit them academically.</p>
+
+      <p>Despite the fervent arguments presented by all sides, it quickly became clear that, regardless of whether calculators were allowed, they would be used. The moment students had access to calculators at home, they used them to cheat on their homework. Educators quickly realized that, despite public debate, they had to adapt to make sure students actually learned math.</p>
+
+      <p>Luckily, all parties learned their lessons and no destructive technology ever touched the sphere of education again…</p>
+
+      <p>One of the great paradoxes of education is that while knowledge is generally desired, the willingness to put in the effort to get it doesn’t come as easily. To learn something means to struggle, to wrestle with new ideas and fail until you form real understanding. But this struggle means that even though almost everyone wants to learn, it’s a taxing process to acquire knowledge.</p>
+
+      <p>That’s why when young people today see a technology that could do all of school for them, it can be really hard to just say “no.” On top of this, any student who has the will to reject LLMs has to compete with students who are using them for everything. The grading curve on a research paper may be minimal because, even though instruction was poor, a few students gave their prompt to ChatGPT and said, “Write this like a college student with a 4.0 and whose parents are proud of them.”</p>
+
+      <p>Roughly 43% of college students report using ChatGPT or similar AI tools for schoolwork <a href="https://nerdynav.com/chatgpt-cheating-statistics/#:~:text=%2A%2043,ChatGPT%20or%20similar%20AI%20tools">source</a>. And that’s only the ones who actually admitted to it. Of those, 89% have used it for homework, 53% for writing essays, and 48% have fed take-home exam or quiz questions into AI. In other words, tasks that traditionally measured individual effort are now routinely “outsourced” straight to LLMs. In computer science specifically, students can take the instructions for an entire multi-week coding assignment and be given a half-decent output nearly instantaneously. So, many students are doing just that, and handing in whatever was spat out at them.</p>
+
+      <p>Just like with calculators, AI is being used despite the policies put in place by universities. That means it’s time for educators to adapt… right? How’s that going?</p>
+
+      <p>In my department, I’ve found there to be four different kinds of teachers:</p>
+
+      <ol>
+        <li>
+          <strong>Professors who do not change their policies or their curricula.</strong>
+          <p>This is the general track for the average disconnected tenured professor. There’s a sort of neoliberal idea to their philosophy that says the onus is on the student to learn, and if they choose to use LLMs they are only hurting themselves. On some level I appreciate that, but on another, if grades are important in your field, there can be a huge disadvantage if a student doesn’t use all the tools at their disposal.</p>
+        </li>
+
+        <li>
+          <strong>Professors who change their policies but not their curricula.</strong>
+          <p>To me, this is the most frustrating. It feels like these professors are grasping onto the past ways of educating and denying the impact of LLMs entirely. They adjust rules around AI usage (including bans or forced honor pledges) but don’t make any real effort to redesign assignments or teaching methods to reflect the current reality. As a result, students are often left with outdated assessments that don’t reflect the skills they’ll actually need, while also being policed more harshly than before.</p>
+        </li>
+
+        <li>
+          <strong>Professors who do not change their policies but do change their curricula.</strong>
+          <p>The rarest of the four, these are the professors that decide to embrace and allow the use of AI but make their curriculum much harder because they are expecting students to use LLMs to solve problems. Basically, their goal is to prove the weaknesses of relying only on AI by designing problems that they believe AI will not be able to solve. But perhaps obviously, this means that questions are simply harder and more vague. This causes problems for people using AI, but also for people that do not.</p>
+        </li>
+
+        <li>
+          <strong>Professors who change their policies and curricula.</strong>
+          <p>These professors genuinely invest in adapting to the new educational landscape. Redesigning courses takes significant time and effort, and they often encounter pushback from students resistant to change. Still, by rethinking assignments, integrating new tools, and focusing on deeper learning outcomes, they create the most meaningful long-term benefits for their students.</p>
+        </li>
+      </ol>
+
+      <p>I deeply appreciate the fourth type of professor and have learned so much from those classes. Unfortunately, this is not the typical classroom, at least at Carolina.</p>
+
+      <p>You see, calculators can be taken away. When you walked into a classroom in the 1970s, all that technology was gone, so teachers could make students practice in person without them. One of the big differences with AI is that a little event at the start of 2020 meant school and the internet were forever tightly coupled.</p>
+
+      <p>There is no taking away AI. Every assignment is on the computer, and some classes are even fully hosted online. It’s simply too easy for students to open a new tab and get a well-worded, individualized answer to any question. As a TA, I’ve spoken to many teaching staff (students and professors) at my university who have been baffled by students in their advanced-level courses who don’t know basic stuff like conditionals and for-loops.</p>
+
+      <p>So where do we go from here? What I’ve seen work best has been a good serving of old-fashioned in-person struggling. The professors who care have started to encourage, or even require students to close their laptops during class. They have students work in groups to encourage in-class participation and give them active learning problems so they can follow along and test their understanding as they go. They are assessed frequently on a smaller scale and, at least for me, that forces constant engagement throughout the semester.</p>
+
+      <p>Some classes have even started requiring all students to come to office hours and answer questions in a one-on-one environment with the TAs. In the CS department, these are known as “check-offs,” and though there was initial student pushback, they have been acclaimed by both teaching staff and students for the clarity and deeper understanding they provide.</p>
+
+      <p>It may feel slow, but I do see adaptations clawing back the student experience. The only question is whether universities will embrace these practices on an institutional level or if they’ll ChatGPT a statement about how nothing has fundamentally changed.</p>
+    `,
+  },
+  {
     id: "gen-ai",
     title: "Generative Artificial Intelligence and Creative Fulfillment in CS",
     date: "April 1st, 2025",
