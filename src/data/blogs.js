@@ -59,6 +59,30 @@ export const blogs = [
     `,
   },
   {
+    id: "gratitude-1",
+    title: "Summer Gratitude Post",
+    date: "June 8th, 2025",
+    blurb:
+      "I am so lucky, privileged and supported. It's important to remember to say thank you!",
+    content: `
+      <p>I just wrapped up my third week with Apple in Austin, Texas and it’s helped to remind me how incredibly lucky and privileged I am. As such, I want to start a new tradition of sharing a gratitude post every summer!</p>
+
+      <p>I’ve already met so many wonderful, brilliant, and kind folks and I’m thrilled that I get to spend the rest of the summer learning from and growing alongside them. My software skills have already grown significantly thanks to the thoughtful guidance of my manager, my technical mentor, and the rest of the incredible team I get to work with here everyday. Beyond the code, I’ve been learning just as much about communication and what it means to be part of a team that leads with innovation, collaboration, and a focus on serving others.</p>
+
+      <p>Now, I have a few important things I’ve been meaning to say…</p>
+
+      <p>Three years ago I didn’t know anything about computer programming. I had no idea what a for loop was. Python was an animal and Java was a coffee. That changed when, as an undecided major, I took Professor <a href="https://www.linkedin.com/in/krisjordan/" target="_blank" rel="noopener noreferrer">Kris Jordan</a>’s comp 110. More than just teaching the fundamentals, I am a computer scientist today because of Kris Jordan’s engaging and inspiring introductory class.</p>
+
+      <p>Two years ago I didn’t know any mobile development. TestFlights were for aspiring pilots and Swift was usually following Taylor. That changed when I joined App Team Carolina thanks to the insistence of <a href="https://www.linkedin.com/in/alexandra-marum/" target="_blank" rel="noopener noreferrer">Alexandra Marum</a>. <a href="https://www.linkedin.com/in/samrshi/" target="_blank" rel="noopener noreferrer">Sam Shi</a>’s expertly designed iOS development curriculum taught me to make real, complex mobile applications. Moving through App Team’s Learning and Production Teams lead by <a href="https://www.linkedin.com/in/alec-nipp/" target="_blank" rel="noopener noreferrer">Alec Nipp</a>, <a href="https://www.linkedin.com/in/samrshi/" target="_blank" rel="noopener noreferrer">Sam Shi</a>, and <a href="https://www.linkedin.com/in/david-williams-828aa4165/" target="_blank" rel="noopener noreferrer">David Williams</a> taught me development principles, responsible design, and how to work with specialized teams of developers, designers, and product managers.</p>
+
+      <p>A year ago, I didn’t know anything about software development professionally. I didn’t know junior year summer was CS internship season, and had no idea where to start when it came to preparation. It was the indomitable <a href="https://www.linkedin.com/in/noahsmiths/" target="_blank" rel="noopener noreferrer">Noah Smith</a> who taught me the ropes. He showed me resources and a near comical level of patience so that I could be as prepared as possible. I also have to give great credit to Professor <a href="https://www.linkedin.com/in/connor-mcmahon-66a334135/" target="_blank" rel="noopener noreferrer">Cece McMahon</a> for believing in me to be her TA. I’ve learned through that experience to communicate complex ideas and work with a team professionally.</p>
+
+      <p><a href="https://www.linkedin.com/in/ajaygandecha/" target="_blank" rel="noopener noreferrer">Ajay Gandecha</a> and <a href="https://www.linkedin.com/in/samrshi/" target="_blank" rel="noopener noreferrer">Sam Shi</a> made their office hours personally available (even though I wasn’t even in their classes) so I could ask interview prep questions. <a href="https://www.linkedin.com/in/audrey-toney/" target="_blank" rel="noopener noreferrer">Audrey Toney</a> and <a href="https://www.linkedin.com/in/laurenlascano/" target="_blank" rel="noopener noreferrer">Lauren Lascano</a> showed me good interview practices and taught me what companies were looking for in technical interviews.</p>
+
+      <p>If it were not for the unrelenting support of my family and friends I would never have been able to get a role at Apple. All of this may sound a bit sappy, but I think it’s really important to recognize and show appreciation to the ones who got me here today. There are so many more people that helped me and I hate that I cannot shout all of them out. I just want to say thank you to my support system and let them know that I will never be able to repay their kindness, patience, and time.</p>
+    `,
+  },
+  {
     id: "gen-ai",
     title: "Generative Artificial Intelligence and Creative Fulfillment in CS",
     date: "April 1st, 2025",
