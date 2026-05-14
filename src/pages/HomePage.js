@@ -28,27 +28,27 @@ export default function HomePage() {
             <h2>Welcome</h2>
             <p>In case you don't know me, I'm Ben!</p>
             <p>
-              I'm working on my BS in Computer Science with a minor in Creative Writing at UNC
-              Chapel Hill and plan to graduate May, 2026.
+              I graduated from the University of North Carolina at Chapel Hill in May with my BS in Computer 
+              Science and a minor in Creative Writing.
             </p>
             <p>
-              This past summer I was a software engineering intern at Apple in Austin, Texas.
+              I now work as a software engineer on the Emerging Technologies team at Red Hat in their Raleigh office, where I started in June 2026.
             </p>
             <p>
-              I'm currently a teaching assistant for UNC's Computer Organization course (COMP 311)
-              and used to be a TA for our System's Fundamentals course (COMP 211).
-              I am the <a href="https://csxl.unc.edu/welcome" target="_blank" rel="noreferrer">Computer Science Experience Labs</a> (CSXL) staff manager and have been
-              working with them for three semesters.
+              In the Summer of 2025 I was a software engineering intern at Apple in Austin, Texas.
             </p>
             <p>
-              I am the senior advisor and previous CEO of <a href="https://appteamcarolina.com" target="_blank" rel="noreferrer">App Team Carolina</a>, a nonprofit
+              I was a teaching assistant for UNC's Computer Organization (COMP 311)
+              and System's Fundamentals (COMP 211) courses, and won the  <a href="https://cs.unc.edu/about/awards/department-awards/pozefsky-la-award/e" target="_blank" rel="noreferrer">Diane Pozefsky Learning Assistant Award</a> at my graduation.
+              I also led the <a href="https://csxl.unc.edu/welcome" target="_blank" rel="noreferrer">Computer Science Experience Labs</a> (CSXL) as the staff manager for four semesters.
+            </p>
+            <p>
+              I am an advisor and a previous CEO of <a href="https://appteamcarolina.com" target="_blank" rel="noreferrer">App Team Carolina</a>, a nonprofit
               student organization that primarily teaches mobile development and makes production-level
-              apps including ones for other nonprofits like PORCH and startup apps like Centible.
+              apps including ones for other nonprofits like <a href="https://porchcommunities.org" target="_blank" rel="noreferrer">PORCH</a> and startup apps like <a href="https://centible.app" target="_blank" rel="noreferrer">Centible</a>.
             </p>
             <p>
-              I recently started learning guitar and love indie and rock music. Being placed in Austin was 
-              a great fit as the live music scene there is incredible, and I loved seeing my favorite band,  
-              Peach Pit, perform! I also spend a lot of time reading. Lately, I've been focused on the epic 
+              I recently started learning guitar and love indie and rock music. My favorite bands include Peach Pit, The Beatles, and LCD Soundsystem. I also spend a lot of time reading. Lately, I've been focused on the epic 
               fantasy series <i>The Stormlight Archive.</i> In addition, I'm currently training for a half marathon, and 
               always appreciate recommendations for good running routes.
             </p>
