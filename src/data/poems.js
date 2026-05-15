@@ -1,6 +1,27 @@
 // Store poem metadata and HTML content here
 export const poems = [
     {
+      id: "there-you-go-again",
+      title: "there you go again",
+      author: "ben chesser",
+      date: "Spring 2026",
+      content: `<pre>Oh, there go my thoughts once again
+    the       y
+          go                  again
+                t        o
+              y   ou
+
+                         once    i
+                thought
+              y   ou
+             my
+             m     u   s    e
+
+Oh, there     y   ou
+          go
+                              again</pre>`
+    },
+    {
       id: "paper-flowers",
       title: "Paper Flowers",
       author: "ben chesser",

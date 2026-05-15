@@ -169,6 +169,18 @@ main.home { padding: 28px 0 80px; }
   color: var(--accent);
 }
 .poem p { font-size: 20px; line-height: 1.9; margin: 18px 0; }
+.poem pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  line-height: 2.4;
+  white-space: pre;
+  overflow-x: auto;
+  background: transparent;
+  border: none;
+  padding: 8px 0 24px;
+  margin: 0;
+  color: var(--accent);
+}
 
 /* Blog list */
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
