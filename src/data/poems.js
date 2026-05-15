@@ -2,7 +2,7 @@
 export const poems = [
     {
       id: "there-you-go-again",
-      title: "there you go again",
+      title: "Oh, there go my thoughts once again",
       author: "ben chesser",
       date: "Spring 2026",
       content: `<pre>Oh, there go my thoughts once again

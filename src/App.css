@@ -171,7 +171,7 @@ main.home { padding: 28px 0 80px; }
 .poem p { font-size: 20px; line-height: 1.9; margin: 18px 0; }
 .poem pre {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 2.4;
   white-space: pre;
   overflow-x: auto;
