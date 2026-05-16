@@ -38,7 +38,7 @@ Oh, there     y   ou
         the walls suppress contact<br/>
         convince that it was not a painful lesson<br/>
         it was just painful<br/>
-        that my woods were left as ash and rubble<br/>
+        that the woods were left as ash and rubble<br/>
         and only I was charred</p>
 
         <p>if I destroyed you, do not smile<br/>

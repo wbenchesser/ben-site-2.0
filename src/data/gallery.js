@@ -4,6 +4,36 @@ export const galleryData = [
     title: 'Photography',
     images: [
       {
+        file: 'switzerland.JPG',
+        focus: 'center',
+        location: 'Lauterbrunnen, Switzerland',
+        date: 'May, 2026',
+      },
+      {
+        file: 'powerplant-sunset.JPG',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'May, 2026',
+      },
+      {
+        file: 'chapel-hill-mural.jpg',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'April, 2026',
+      },
+      {
+        file: 'empire-state.jpg',
+        focus: 'center',
+        location: 'New York, New York',
+        date: 'December, 2025',
+      },
+      {
+        file: 'peach-pit.JPG',
+        focus: 'center',
+        location: 'Raleigh, North Carolina',
+        date: 'October, 2025',
+      },
+      {
         file: 'moon-garage.jpg',
         focus: 'center',
         location: 'Austin, Texas',
@@ -100,10 +130,70 @@ export const galleryData = [
     title: 'Scrap Book',
     images: [
       {
+        file: 'ben-aidan-grads.jpg',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'May, 2026',
+      },
+      {
+        file: 'ben-aura.jpg',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'May, 2026',
+      },
+      {
+        file: 'ben-truck.jpg',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'April, 2026',
+      },
+      {
+        file: 'ben-retreat-s26.jpg',
+        focus: 'center',
+        location: 'Oak Island, North Carolina',
+        date: 'April, 2026',
+      },
+      {
+        file: 'ben-debugging.JPEG',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'April, 2026',
+      },
+      {
+        file: 'ben-snl.JPG',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'February, 2026',
+      },
+      {
+        file: 'ben-noah-ryder.jpg',
+        focus: 'center',
+        location: 'New York, New York',
+        date: 'December, 2025',
+      },
+      {
+        file: 'ben-riley.jpg',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'October, 2025',
+      },
+      {
+        file: 'ben-glass.jpg',
+        focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'October, 2025',
+      },
+      {
         file: 'interns.JPG',
         focus: 'left',
         location: 'Austin, Texas',
         date: 'August, 2025',
+      },
+      {
+        file: 'ben-noah-flowers.JPG',
+        focus: 'center',
+        location: 'Durham, North Carolina',
+        date: 'May, 2025',
       },
       {
         file: 'ben-hamsini.JPG',
@@ -122,6 +212,12 @@ export const galleryData = [
         focus: 'center',
         location: 'Chapel Hill, North Carolina',
         date: 'January, 2025',
+      },
+      {
+        file: 'ben-fam.JPG',
+        focus: 'center',
+        location: 'Durham, North Carolina',
+        date: 'December, 2025',
       },
       {
         file: 'thanksgiving.jpg',
