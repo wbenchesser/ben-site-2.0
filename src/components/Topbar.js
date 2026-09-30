@@ -19,7 +19,6 @@ export default function Topbar({ onOpenMenu, menuOpen = false }) {
           <span className="menu-btn-label">Menu</span>
         </button>
         <div className="social">
-          <a className="icon-btn" href="mailto:wbenchesser@gmail.com" aria-label="Email"><Icon name="mail"/></a>
           <a className="icon-btn" href="https://github.com/wbenchesser" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github"/></a>
           <a className="icon-btn" href="https://www.linkedin.com/in/wbenchesser" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin"/></a>
         </div>
