@@ -2,11 +2,49 @@ const projectImage = (file) => `${process.env.PUBLIC_URL || ''}/images/projects/
 
 export const projects = [
   {
+    id: 'localized',
+    title: 'Localized',
+    summary:
+      'HackNC 2025 2nd Place and Best Personal Finance Hack: an iOS rewards app connecting Chapel Hill businesses with students.',
+    image: projectImage('localized.png'),
+    imageFrame: 'iphone',
+    tech: ['Swift', 'SwiftUI', 'FastAPI', 'PostgreSQL', 'AWS RDS', 'AWS S3', 'MapKit', 'JWT'],
+    repo: 'https://github.com/alexandramarum/localized',
+    content: `
+      <p>
+        Localized helps students and visitors discover affordable local favorites while bringing more foot traffic to
+        Chapel Hill's small businesses.
+      </p>
+      <h2>Features</h2>
+      <ul>
+        <li>Browse weekly offers from nearby restaurants, shops, and studios.</li>
+        <li>Claim a free weekly coupon and earn another by sharing the app.</li>
+        <li>Explore businesses on an interactive map and redeem deals in-store with QR codes.</li>
+        <li>Business accounts can create offers, manage coupons, and track redemptions.</li>
+      </ul>
+      <h2>How We Built It</h2>
+      <p>
+        The SwiftUI app uses MVVM architecture with separate customer and business flows. A Python FastAPI backend
+        provides authentication and coupon management, backed by PostgreSQL on AWS RDS and image storage in AWS S3.
+        MapKit powers discovery, while QR scanning connects the app to in-store redemption.
+      </p>
+      <h2>Awards</h2>
+      <ul>
+        <li>HackNC 2025: 2nd Place, General Track.</li>
+        <li>HackNC 2025: Capital One Best Personal Finance Hack.</li>
+      </ul>
+      <p>
+        <a href="https://devpost.com/software/localized" target="_blank" rel="noreferrer">Read the full story on Devpost</a>.
+      </p>
+    `,
+  },
+  {
     id: 'magic-missiles',
     title: 'Magic Missiles',
     summary:
       'HackNC 2024 Best Gaming Hack: campus-scale location strategy built with Swift client and a TypeScript/Express backend.',
     image: projectImage('magic-missiles.png'),
+    imageFrame: 'iphone',
     tech: ['Swift', 'TypeScript', 'Express', 'Prisma', 'PostgreSQL', 'Push Notifications'],
     repo: 'https://github.com/rydklein/missile-app',
     content: `

@@ -40,8 +40,14 @@ export default function ProjectPage() {
         <p className="project-summary">{project.summary}</p>
 
         {project.image ? (
-          <div className="project-hero">
-            <img src={project.image} alt={project.title} />
+          <div className={`project-hero${project.imageFrame === 'iphone' ? ' project-hero-phone' : ''}`}>
+            {project.imageFrame === 'iphone' ? (
+              <div className="iphone-frame">
+                <img src={project.image} alt={`${project.title} app screenshot`} />
+              </div>
+            ) : (
+              <img src={project.image} alt={project.title} />
+            )}
           </div>
         ) : null}
 

@@ -222,7 +222,14 @@ main.home { padding: 28px 0 80px; }
 .project-container { max-width: 900px; }
 .project-summary { color: var(--muted); font-size: 18px; line-height: 1.7; margin: -6px 0 24px; }
 .project-hero { border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); margin-bottom: 28px; }
-.project-hero img { display: block; width: 100%; height: auto; object-fit: cover; }
+.project-hero img { display: block; width: auto; max-width: 100%; height: auto; max-height: min(600px, 70vh); margin: 0 auto; object-fit: contain; }
+.project-hero-phone { overflow: visible; border: 0; border-radius: 0; background: transparent; padding: 6px 6px 18px; }
+.iphone-frame { position: relative; width: fit-content; max-width: 100%; margin: 0 auto; padding: 8px; background: #101112; border: 2px solid #62656a; border-radius: 42px; box-shadow: inset 0 0 0 2px #282a2d, 0 12px 28px rgba(0,0,0,0.25); }
+.iphone-frame::before,
+.iphone-frame::after { content: ''; position: absolute; width: 3px; background: #62656a; border-radius: 2px; }
+.iphone-frame::before { left: -4px; top: 22%; height: 44px; }
+.iphone-frame::after { right: -4px; top: 28%; height: 60px; }
+.iphone-frame img { max-height: min(580px, 66vh); border-radius: 32px; }
 .project-tech { margin: 32px 0 28px; }
 .project-tech h2 { font-family: var(--font-heading); font-weight: 900; font-size: 24px; margin-bottom: 12px; }
 .project-tech ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
