@@ -71,26 +71,23 @@
   .menu-btn-label { display: none; }
 }
 
+/* Homepage footer */
+.home-footer { margin-top: 48px; border-top: 1px solid rgba(255,255,255,0.14); }
+.home-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 26px; padding-bottom: 26px; color: var(--muted); font-size: 13px; }
+.home-footer-heart { color: var(--brand); }
+
 /* Hero */
 .hero { padding-top: 0; text-align: center; margin-top: -35px; }
 .hero-title {
-  font-family: var(--font-hero);
-  font-weight: 900;
-  font-size: clamp(56px, calc(min(100vw, var(--maxw)) * 0.12), 170px);
-  line-height: 0.85;
-  margin: 0 0 20px;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-  white-space: nowrap; /* prevent wrap in Safari */
-  hyphens: none;
-  -webkit-hyphens: none;
+  margin: 0;
   width: 100%;
-  text-align: center;
+  line-height: 0;
 }
-.hero-header { position: relative; display: grid; justify-items: center; width: min(100%, var(--maxw)); margin: 0 auto 10px; }
-/* Keep signature overlap consistent across sizes */
-.signature { position: absolute; right: clamp(6px, 1vw, 16px); bottom: clamp(-12px, -0.9vw, -6px); color: var(--brand); }
-.signature-text { font-family: var(--font-signature); font-size: clamp(30px, 5.4vw, 58px); line-height: 1; color: var(--brand); white-space: nowrap; text-shadow: 0 1px 0 rgba(0,0,0,0.25); }
+.hero-header { width: 100%; margin: 0 auto 10px; }
+/* One coordinate system preserves the signature's overlap at every width. */
+.hero-wordmark { display: block; width: 100%; height: auto; overflow: visible; }
+.hero-wordmark-name { font-family: var(--font-hero); font-weight: 900; font-size: 132px; letter-spacing: 0.06em; fill: var(--accent); }
+.hero-wordmark-signature { font-family: var(--font-signature); font-weight: 400; font-size: 58px; fill: var(--brand); }
 .hero-media {
   width: 100%;
   background: var(--panel);
@@ -106,19 +103,6 @@
   background-image: radial-gradient(60% 80% at 30% 20%, #2a2c30, #1a1b1c 70%);
 }
 
-@media (max-width: 520px) {
-  .hero-title {
-    font-size: clamp(34px, 10vw, 52px);
-    letter-spacing: 0.035em;
-    line-height: 0.95;
-    white-space: normal;
-  }
-
-  .signature {
-    right: clamp(6px, 4vw, 18px);
-    bottom: clamp(-10px, -1.6vw, -4px);
-  }
-}
 /* Hero image caption */
 .hero-caption {
   position: absolute;

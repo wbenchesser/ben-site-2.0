@@ -10,10 +10,16 @@ export default function HomePage() {
       <main className="home">
         <div className="container hero">
           <div className="hero-header">
-            <h1 className="hero-title">BEN CHESSER</h1>
-            <div className="signature" aria-hidden>
-              <span className="signature-text">wbenchesser</span>
-            </div>
+            <h1 className="hero-title" aria-label="Ben Chesser">
+              <svg className="hero-wordmark" viewBox="0 0 1100 148" aria-hidden="true" focusable="false">
+                <text className="hero-wordmark-name" x="14" y="114" textLength="1065" lengthAdjust="spacingAndGlyphs">
+                  BEN CHESSER
+                </text>
+                <text className="hero-wordmark-signature" x="1090" y="139" textAnchor="end" textLength="275" lengthAdjust="spacingAndGlyphs">
+                  wbenchesser
+                </text>
+              </svg>
+            </h1>
           </div>
           <div
             className="hero-media"
@@ -98,6 +104,12 @@ export default function HomePage() {
           </section>
         </div>
       </main>
+      <footer className="home-footer">
+        <div className="container home-footer-inner">
+          <span>© {new Date().getFullYear()} Ben Chesser</span>
+          <span>Made with <span className="home-footer-heart" role="img" aria-label="love">♥</span></span>
+        </div>
+      </footer>
     </>
   );
 }
