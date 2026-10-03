@@ -17,7 +17,7 @@ export default function MenuOverlay({ open, onClose, currentRoute = '/' }) {
     onClose?.();
   };
   return (
-    <div className={`overlay ${open ? 'open' : ''}`} role="dialog" aria-modal="true" aria-label="Site menu">
+    <div id="site-menu" className={`overlay ${open ? 'open' : ''}`} role="dialog" aria-modal="true" aria-label="Site menu">
       <button className="overlay-close" onClick={onClose} aria-label="Close menu">×</button>
       <div className="overlay-inner">
         <nav className="overlay-nav">

@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <>
-      <Topbar onOpenMenu={() => setMenuOpen(true)} menuOpen={menuOpen} />
+      <Topbar onOpenMenu={() => setMenuOpen(true)} menuOpen={menuOpen} currentRoute={route} />
       <div className="topbar-offset" aria-hidden="true" />
       {view}
       <MenuOverlay

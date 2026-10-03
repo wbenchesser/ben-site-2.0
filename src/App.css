@@ -6,17 +6,34 @@
   right: 0;
   z-index: 10;
   width: 100%;
-  background: linear-gradient(180deg, rgba(17,18,19,0.95), rgba(17,18,19,0.6) 70%, rgba(17,18,19,0));
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  padding: 0 16px;
+  transition: padding .3s ease;
 }
 .topbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px clamp(12px, 4vw, 40px);
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 20px;
+  min-height: 72px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: max-width .3s ease, background .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
+.topbar-scrolled { padding-top: 10px; }
+.topbar-scrolled .topbar-inner { max-width: calc(var(--maxw) + 40px); background: rgba(20,21,23,0.88); border-color: rgba(255,255,255,0.13); box-shadow: 0 8px 28px rgba(0,0,0,0.24); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.topbar-nav { display: flex; gap: 4px; }
+.topbar .social { margin-left: auto; }
+.topbar-nav a { padding: 10px 16px; border-radius: 999px; text-decoration: none; font-size: 14px; transition: background .2s ease, color .2s ease; }
+.topbar-nav a:hover { background: rgba(255,255,255,0.06); }
+.topbar-nav a[aria-current="page"] { color: var(--brand); background: transparent; }
+.topbar a:focus-visible, .topbar button:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
+.topbar .menu-btn { display: none; }
+.topbar .icon-btn { border-color: transparent; border-radius: 50%; background: transparent; }
+.topbar .icon-btn:hover { background: rgba(170,131,232,0.14); }
 .menu-btn {
   display: inline-flex;
   align-items: center;
@@ -63,12 +80,21 @@
 .icon-btn:active { transform: translateY(1px); }
 .icon-btn svg { width: 20px; height: 20px; display: block; }
 
-.topbar-offset { height: var(--topbar-height); }
+.topbar-offset { height: 96px; }
 
-@media (max-width: 600px) {
-  .topbar-inner { padding: 10px 14px; }
-  .menu-btn { padding: 0 8px; width: 42px; justify-content: center; }
-  .menu-btn-label { display: none; }
+@media (max-width: 850px) {
+  .topbar { padding-left: 12px; padding-right: 12px; }
+  .topbar-inner { padding: 10px 12px; gap: 12px; min-height: 64px; }
+  .topbar-nav { display: none; }
+  .topbar .menu-btn { display: inline-flex; border-color: transparent; background: transparent; border-radius: 0; }
+  .topbar .social { gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topbar, .topbar-inner, .topbar-nav a { transition: none; }
+}
+@media (max-width: 380px) {
+  .topbar .menu-btn-label { display: none; }
+  .topbar .menu-btn { width: 36px; padding: 0; justify-content: center; }
 }
 
 /* Homepage footer */
@@ -77,7 +103,7 @@
 .home-footer-heart { color: var(--brand); }
 
 /* Hero */
-.hero { padding-top: 0; text-align: center; margin-top: -35px; }
+.hero { padding-top: 0; text-align: center; margin-top: -50px; }
 .hero-title {
   margin: 0;
   width: 100%;
@@ -118,7 +144,20 @@
 }
 
 /* Content */
-main.home { padding: 28px 0 80px; }
+main.home { padding: 28px 0 80px; overflow-x: clip; }
+/* Full-width ribbons sit behind the content without affecting its layout. */
+.home-wave { position: relative; isolation: isolate; top: calc(50% + 200px);}
+.home .section { isolation: isolate; }
+.home-list-grid.home-wave { isolation: auto; }
+.home-wave::before { content: ''; position: absolute; z-index: -1; pointer-events: none; left: 50%; top: 50%; width: 100vw; height: 280px; transform: translate(-50%, -50%); background: url('./assets/purple-wave.svg') center / 100% 100% no-repeat; }
+.home-wave-blog::before { transform: translate(-50%, -50%) scaleX(-1); }
+.home-wave-poems::before {
+  top: calc(50% + 20px);
+}
+@media (max-width: 600px) {
+  .home-wave-hero::before { top: calc(50% + 28px); }
+}
+
 .section { margin: 54px 0; }
 .page { padding: 28px 0 80px; }
 .page-title { font-family: var(--font-heading); font-weight: 900; font-size: clamp(32px, 6vw, 64px); margin: 6px 0 18px; color: var(--accent); text-align: left; }

@@ -21,17 +21,19 @@ export default function HomePage() {
               </svg>
             </h1>
           </div>
+          <div className="home-wave home-wave-hero">
           <div
             className="hero-media"
             style={{ backgroundImage: `url("${heroImage}")` }}
             role="img"
           >
           </div>
+          </div>
         </div>
 
         <div className="container">
           <section className="section">
-            <h2>Welcome</h2>
+            <h2>Hi there!</h2>
             <p>In case you don't know me, I'm Ben!</p>
             <p>
               I graduated from the University of North Carolina at Chapel Hill in May 2026 with a BS in Computer 
@@ -70,7 +72,7 @@ export default function HomePage() {
               None of it is generative AI, I promise. As I write, I'll post and update here.
             </p>
             <h3 className="home-subtitle">Recent Blog Posts</h3>
-            <div className="home-list-grid">
+            <div className="home-list-grid home-wave home-wave-blog">
               {blogs.slice(0, 3).map((b) => (
                 <a key={b.id} className="blog-card" href={`#/blog/${b.id}`}>
                   <div className="blog-card-inner">
@@ -87,10 +89,10 @@ export default function HomePage() {
           <section className='section'>
             <p>
               Some of you may know I was a creative writing minor. I don't know how, it's not like I mention it.
-              If it's a poem, it may be a bit sappy or cringe, so be prepared for that. Here's some of my work.
+              If it's a poem, it may be a bit sappy, so be prepared for that. Here's some of my work.
             </p>
             <h3 className="home-subtitle">Recent Poems</h3>
-            <div className="home-list-grid">
+            <div className="home-list-grid home-wave home-wave-poems">
               {poems.slice(0, 3).map((p) => (
                 <a key={p.id} className="poem-card" href={`#/poetry/${p.id}`}>
                   <div className="poem-card-inner">
