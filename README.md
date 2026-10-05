@@ -53,6 +53,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Gallery image updates
+
+After adding or replacing photos in `public/images/gallery/photography` or
+`public/images/gallery/scrap-book`, run `npm run gallery:thumbnails`
+(the script uses Sharp and works across platforms). Commit the generated files in
+`public/images/gallery/thumbnails` along with the originals. Existing thumbnails
+are regenerated with corrected orientation. The grid uses 480px/960px JPEG variants;
+the photo viewer requests the original only when opened. Builds copy the committed
+variants. A prebuild check decodes every thumbnail, rejects blank images or wrong
+dimensions, and checks exact filename capitalization against the gallery entries.
+
 ### Making a Progressive Web App
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)

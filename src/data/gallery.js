@@ -4,6 +4,12 @@ export const galleryData = [
     title: 'Photography',
     images: [
       {
+        file: 'montreux.JPG',
+        focus: 'center',
+        location: 'Montreux, Switzerland',
+        date: 'May, 2026',
+      },
+      {
         file: 'switzerland.JPG',
         focus: 'center',
         location: 'Lauterbrunnen, Switzerland',
@@ -130,6 +136,24 @@ export const galleryData = [
     title: 'Scrap Book',
     images: [
       {
+        file: 'ben-nidhi.JPG',
+        focus: 'center',
+        location: 'Austin, Texas',
+        date: 'September, 2026',
+      },
+      {
+        file: 'beach-trip-26.JPEG',
+        focus: 'center',
+        location: 'Kiawah Island, South Carolina',
+        date: 'August, 2026',
+      },
+      {
+        file: 'ben-mom-dad.jpg',
+        focus: 'right',
+        location: 'The Matterhorn, Switzerland',
+        date: 'May, 2026',
+      },
+      {
         file: 'ben-aidan-grads.jpg',
         focus: 'center',
         location: 'Chapel Hill, North Carolina',
@@ -138,6 +162,12 @@ export const galleryData = [
       {
         file: 'ben-aura.jpg',
         focus: 'center',
+        location: 'Chapel Hill, North Carolina',
+        date: 'May, 2026',
+      },
+      {
+        file: 'ben-golfer.JPEG',
+        focus: 'left',
         location: 'Chapel Hill, North Carolina',
         date: 'May, 2026',
       },

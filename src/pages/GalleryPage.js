@@ -1,5 +1,6 @@
 import React from 'react';
 import { galleryData } from '../data/gallery';
+import useModalDialog from '../hooks/useModalDialog';
 import '../App.css';
 
 const focusPositions = {
@@ -10,34 +11,28 @@ const focusPositions = {
   right: '100% 50%',
 };
 
+function GalleryPhoto({ src, preview, alt }) {
+  const [loaded, setLoaded] = React.useState(false);
+  const [failed, setFailed] = React.useState(false);
+  return (
+    <div className="gallery-fullscreen-img" aria-busy={!loaded && !failed}>
+      {!loaded && <img className="gallery-fullscreen-preview" src={preview} alt="" aria-hidden="true" />}
+      <img className={`gallery-fullscreen-original${loaded ? ' is-loaded' : ''}`}
+        src={src} alt={alt} decoding="sync"
+        onLoad={() => setLoaded(true)} onError={() => setFailed(true)} />
+      {failed && <span className="gallery-image-status" role="status">Full-size photo unavailable. Showing preview.</span>}
+    </div>
+  );
+}
+
 export default function GalleryPage() {
   const [active, setActive] = React.useState(null);
-  const closeButtonRef = React.useRef(null);
-  const lastFocusedRef = React.useRef(null);
+  const dialogRef = useModalDialog(Boolean(active));
   const basePath = `${process.env.PUBLIC_URL || ''}/images/gallery`;
 
-  React.useEffect(() => {
-    if (!active) return undefined;
-    const handleKeydown = (event) => {
-      if (event.key === 'Escape') {
-        setActive(null);
-      }
-    };
-    window.addEventListener('keydown', handleKeydown);
-    return () => window.removeEventListener('keydown', handleKeydown);
-  }, [active]);
-
-  React.useEffect(() => {
-    if (active) {
-      closeButtonRef.current?.focus();
-    } else {
-      lastFocusedRef.current?.focus?.();
-    }
-  }, [active]);
-
-  const openImage = (section, image) => {
-    lastFocusedRef.current = document.activeElement;
-    setActive({ section, image });
+  const openImage = (section, image, event) => {
+    const thumbnail = event.currentTarget.querySelector('img');
+    setActive({ section, image, preview: thumbnail.currentSrc || thumbnail.src });
   };
 
   const closeActive = () => setActive(null);
@@ -52,7 +47,7 @@ export default function GalleryPage() {
       <div className="container">
         <h1 className="page-title">Gallery</h1>
         <p className="muted">
-          A growing collection of photos and scrapbook snapshots from places and people I love.
+          A growing collection of photos and scrapbook snapshots of places and people I love.
         </p>
 
         {galleryData.map((section) => (
@@ -60,7 +55,7 @@ export default function GalleryPage() {
             <h2 className="gallery-section-title">{section.title}</h2>
             <div className="gallery-grid">
               {section.images.map((image) => {
-                const src = `${basePath}/${section.id}/${image.file}`;
+                const thumbnail = `${basePath}/thumbnails/${section.id}/${image.file}`;
                 const focus = focusPositions[image.focus] || focusPositions.center;
                 const altText = `${image.location} — ${image.date}`;
 
@@ -69,14 +64,17 @@ export default function GalleryPage() {
                     <button
                       type="button"
                       className="gallery-thumb-btn"
-                      onClick={() => openImage(section, image)}
+                      onClick={(event) => openImage(section, image, event)}
                       aria-label={`View ${image.location} full size`}
                     >
                       <div className="gallery-thumb">
                         <img
-                          src={src}
+                          src={`${thumbnail}-480-v2.jpg`}
+                          srcSet={`${thumbnail}-480-v2.jpg 480w, ${thumbnail}-960-v2.jpg 960w`}
+                          sizes="(max-width: 573px) calc(100vw - 62px), (max-width: 839px) calc((100vw - 82px) / 2), (max-width: 1100px) calc((100vw - 102px) / 3), 333px"
                           alt={altText}
                           loading="lazy"
+                          decoding="async"
                           style={{ objectPosition: focus }}
                         />
                       </div>
@@ -94,11 +92,11 @@ export default function GalleryPage() {
       </div>
 
       {active && (
-        <div
+        <dialog
+          ref={dialogRef}
           className="gallery-fullscreen-overlay"
-          role="dialog"
-          aria-modal="true"
           aria-label={`Full-screen view: ${active.image.location}`}
+          onCancel={(event) => { event.preventDefault(); closeActive(); }}
           onClick={closeActive}
         >
           <div className="gallery-fullscreen" onClick={(event) => event.stopPropagation()}>
@@ -107,19 +105,16 @@ export default function GalleryPage() {
               className="gallery-fullscreen-close"
               onClick={closeActive}
               aria-label="Close full-screen image"
-              ref={closeButtonRef}
             >
               ×
             </button>
-            <div className="gallery-fullscreen-img">
-              <img src={activeSrc} alt={activeAlt} />
-            </div>
+            <GalleryPhoto key={activeSrc} src={activeSrc} preview={active.preview} alt={activeAlt} />
             <div className="gallery-fullscreen-meta">
               <h3>{active.image.location}</h3>
               <p>{active.image.date}</p>
             </div>
           </div>
-        </div>
+        </dialog>
       )}
     </main>
   );

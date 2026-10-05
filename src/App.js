@@ -9,16 +9,7 @@ import MenuOverlay from './components/MenuOverlay';
 import ProjectList from './pages/ProjectList';
 import ProjectPage from './pages/ProjectPage';
 import GalleryPage from './pages/GalleryPage';
-
-function useHashRoute() {
-  const [hash, setHash] = React.useState(window.location.hash || '#/');
-  React.useEffect(() => {
-    const onChange = () => setHash(window.location.hash || '#/');
-    window.addEventListener('hashchange', onChange);
-    return () => window.removeEventListener('hashchange', onChange);
-  }, []);
-  return hash.replace(/^#/, '') || '/';
-}
+import useHashRoute from './hooks/useHashRoute';
 
 export default function App() {
   const route = useHashRoute();
@@ -37,7 +28,7 @@ export default function App() {
     <>
       <Topbar onOpenMenu={() => setMenuOpen(true)} menuOpen={menuOpen} currentRoute={route} />
       <div className="topbar-offset" aria-hidden="true" />
-      {view}
+      <React.Fragment key={route}>{view}</React.Fragment>
       <MenuOverlay
         open={menuOpen}
         onClose={() => setMenuOpen(false)}

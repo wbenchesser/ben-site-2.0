@@ -14,6 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "gallery:thumbnails": "node scripts/gallery-thumbnails.cjs",
+    "prebuild": "node scripts/gallery-thumbnails.cjs --check",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
@@ -40,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "sharp": "^0.35.5"
   }
 }

@@ -1,7 +1,9 @@
 import React from 'react';
+import useModalDialog from '../hooks/useModalDialog';
 import '../App.css';
 
 export default function MenuOverlay({ open, onClose, currentRoute = '/' }) {
+  const dialogRef = useModalDialog(open);
   const section = React.useMemo(() => {
     if (!currentRoute || currentRoute === '/' || currentRoute === '#/') return 'home';
     const [, first = 'home'] = currentRoute.split('/');
@@ -17,7 +19,8 @@ export default function MenuOverlay({ open, onClose, currentRoute = '/' }) {
     onClose?.();
   };
   return (
-    <div id="site-menu" className={`overlay ${open ? 'open' : ''}`} role="dialog" aria-modal="true" aria-label="Site menu">
+    <dialog ref={dialogRef} id="site-menu" className="overlay" aria-label="Site menu"
+      onCancel={(event) => { event.preventDefault(); onClose(); }}>
       <button className="overlay-close" onClick={onClose} aria-label="Close menu">×</button>
       <div className="overlay-inner">
         <nav className="overlay-nav">
@@ -28,6 +31,6 @@ export default function MenuOverlay({ open, onClose, currentRoute = '/' }) {
           <a href="#/gallery" onClick={handle} {...linkState('gallery')}>GALLERY</a>
         </nav>
       </div>
-    </div>
+    </dialog>
   );
 }
